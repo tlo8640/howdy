@@ -32,7 +32,7 @@ def doAuth(pamh):
 			return pamh.PAM_AUTHINFO_UNAVAIL
 
 	# Set up syslog
-	syslog.openlog("[HOWDY]", 0, syslog.LOG_AUTH)
+	syslog.openlog("HOWDY", 0, syslog.LOG_AUTH)
 
 	# Alert the user that we are doing face detection
 	if config.getboolean("core", "detection_notice"):
